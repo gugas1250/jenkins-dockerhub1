@@ -8,13 +8,13 @@ pipeline {
 
         stage('Checkout') {
             steps{
-                git branch: 'main', url: 'git@github.com:Vakhob/jenkins-dockerhub.git'
+                git branch: 'git@github.com:gugas1250/jenkins-dockerhub1.git'
             }
         }
 
         stage('Build') {
             steps{
-                sh 'docker build -t devops14:latest .'
+                sh 'docker build -t devops21:latest .'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker push vakhobdevops/devops14-docker:version2'
+                sh 'docker push paulogugas/devops21-docker'
             }
         }
     }
