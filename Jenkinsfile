@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps{
-                sh 'docker build -t devops14:latest .'
+                sh 'docker build -t devops21:latest .'
             }
         }
 
@@ -26,7 +26,7 @@ pipeline {
 
         stage('ImageTag') {
             steps {
-                sh 'docker tag devops14:latest paulogugas/devops14-docker:version2'
+                sh 'docker tag devops21:latest paulogugas/devops21-docker:version2'
             }
         }
 
