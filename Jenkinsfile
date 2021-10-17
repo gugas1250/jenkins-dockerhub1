@@ -26,13 +26,13 @@ pipeline {
 
         stage('ImageTag') {
             steps {
-                sh 'docker tag devops14:latest vakhobdevops/devops14-docker:version2'
+                sh 'docker tag devops14:latest paulogugas/devops14-docker:version2'
             }
         }
 
         stage('Push') {
             steps {
-                sh 'docker push vakhobdevops/devops21-docker:version2'
+                sh 'docker push paulogugas/devops21-docker:version2'
             }
         }
     }
