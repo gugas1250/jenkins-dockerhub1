@@ -32,7 +32,7 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker push vakhobdevops/devops14-docker:version2'
+                sh 'docker push vakhobdevops/devops21-docker:version2'
             }
         }
     }
