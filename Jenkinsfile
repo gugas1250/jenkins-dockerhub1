@@ -1,7 +1,7 @@
 pipeline {
     agent { label 'master' }
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('dockerhub-vakhobdevops')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub-paulogugas')
     }
 
     stages {
