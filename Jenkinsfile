@@ -1,20 +1,20 @@
 pipeline {
     agent { label 'master' }
     environment {
-        DOCKERHUB_CREDENTIALS=credentials('dockerhub-paulogugas')
+        DOCKERHUB_CREDENTIALS=credentials('dockerhub-vakhobdevops')
     }
 
     stages {
 
         stage('Checkout') {
             steps{
-                git branch: 'git@github.com:gugas1250/jenkins-dockerhub1.git'
+                git branch: 'main', url: 'git@github.com:Vakhob/jenkins-dockerhub.git'
             }
         }
 
         stage('Build') {
             steps{
-                sh 'docker build -t devops21:latest'
+                sh 'docker build -t devops14:latest .'
             }
         }
 
@@ -32,7 +32,7 @@ pipeline {
 
         stage('Push') {
             steps {
-                sh 'docker push paulogugas/devops21-docker'
+                sh 'docker push vakhobdevops/devops14-docker:version2'
             }
         }
     }
